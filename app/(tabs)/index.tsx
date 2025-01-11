@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../../components/Header";
 import { SafeAreaView } from "react-native-safe-area-context";
-import EmptyState from "@/components/EmptyState";
+import MedicationList from "@/components/MedicationList";
+import { ScrollView } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -13,8 +14,10 @@ export default function HomeScreen() {
         height: "100%",
       }}
     >
-      <Header />
-      <EmptyState />
+      <ScrollView>
+        <Header />
+        <MedicationList />
+      </ScrollView>
     </SafeAreaView>
   );
 }
