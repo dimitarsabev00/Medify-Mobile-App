@@ -1,14 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import Header from "../../components/Header";
+import { SafeAreaView } from "react-native-safe-area-context";
+import EmptyState from "@/components/EmptyState";
 
-const HomeTabScreen = () => {
+export default function HomeScreen() {
   return (
-    <View>
-      <Text>HomeTabScreen</Text>
-    </View>
+    <SafeAreaView
+      style={{
+        padding: 20,
+        paddingTop: 0,
+        backgroundColor: "white",
+        height: "100%",
+      }}
+    >
+      <Header />
+      <EmptyState />
+    </SafeAreaView>
   );
-};
-
-export default HomeTabScreen;
-
-const styles = StyleSheet.create({});
+}
